@@ -12,6 +12,7 @@ Also, the project will be a little bit of:
 <ul>
   <li>Explanation of 
     <a href="https://pt-br.reactjs.org">React</a>, 
+    <a href="https://nextjs.org">Next.js</a>, 
     <a href="https://firebase.google.com/">Firebase</a>, 
     and <a href="https://developer.android.com/?hl=pt-br">Android</a> development.
   </li>
