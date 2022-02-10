@@ -56,10 +56,60 @@ function Header(props) {
     </header>
   );
 }
+function Intro() {
+  return(
+    <section>
+      <img src="https://art.pixilart.com/e5c1fc858e8d359.gif" alt="Krhuhun GIF"/>
+      <div>
+        <h1>Krhuhun</h1>
+        <h2>Newsletter</h2>
+      </div>
+      <style jsx>
+        {`
+          section {
+            display: flex;
+            align-items: center;
+            margin: 3% auto;
+            width: 80%;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+          }
+          img {
+            width: 100%;
+            max-width: 256px;
+          }
+          div {
+            width: auto;
+            font-size: 250%;
+            
+          }
+          h1 {
+            font-weight: 100;
+          }
+          h2 {
+            font-weight: 100;
+            display: block;
+            margin-left: 64px;
+          }
 
+          @media (max-width: 500px) {
+            div {
+              margin-top: 16px;
+              width: auto;
+              font-size: 150%;
+            }
+          }
+        `}
+      </style>
+    </section>
+  );
+}
 function HomePage() {
   return (
-        <Header />
+    <>
+      <Header />
+      <Intro />
+    </>
   );
 }
 
