@@ -1,20 +1,21 @@
 function GlobalStyle() {
     return (
       <style global jsx>{`
-      
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
         * {
-          //   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+          //   
 
           margin: 0;
           padding: 0;
           box-sizing: border-box;
           list-style: none;
           color: #FFFFFF;
-          font-family: 'Roboto', sans-serif;
+        
         }
         body {
           background-color: #383131;
+          font-family: 'Roboto', sans-serif;
         }
       `}</style>
     );
