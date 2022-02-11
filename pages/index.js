@@ -57,9 +57,9 @@ function Header(props) {
   );
 }
 function Intro() {
-  return(
+  return (
     <section>
-      <img src="https://art.pixilart.com/e5c1fc858e8d359.gif" alt="Krhuhun GIF"/>
+      <img src="https://art.pixilart.com/e5c1fc858e8d359.gif" alt="Krhuhun GIF" />
       <div>
         <h1>Krhuhun</h1>
         <h2>Newsletter</h2>
@@ -104,42 +104,44 @@ function Intro() {
   );
 }
 function PerfilImage() {
-  return(
+  return (
     <div>
       <img src="https://cdn.discordapp.com/attachments/438100369802002432/941338488714969178/photo.png" alt="Jorge photo" />
       <style jsx>{`
         div {
-          align-items: center;
+          max-width: 256px;
+          text-align: center;
           background-color: #963d3d;
-          width: 50%;
         }
-
+        img {
+          width: 100%;
+        }
       `}</style>
     </div>
   );
 }
 function AboutMe() {
-  return(
+  return (
     <section>
       <div>
         <h1>Jorge Lisboa</h1>
-        <h2>Full-stack developer</h2>    
+        <h2>Full-stack developer</h2>
         <h3>
-          I am a teenager developer called Jorge, from Brazil, 
+          I am a teenager developer called Jorge, from Brazil,
           systems development technician and student from PUC in information systems. I’ve already acted
-          with C#, in back-end, HTML, CSS, JavaScript and React, in Front-end and Android, Kotlin and Java in 
-          Mobile development. I’ve used another technologies, and I want to make the difference in the world and 
+          with C#, in back-end, HTML, CSS, JavaScript and React, in Front-end and Android, Kotlin and Java in
+          Mobile development. I’ve used another technologies, and I want to make the difference in the world and
           became a full-stack developer.
         </h3>
       </div>
-      <PerfilImage/>
+      <PerfilImage />
       <style jsx>{`
         section {
-          max-height: 750px;
           background-color: #302929;
-          padding: 64px 10%;
+          padding: 32px 10%;
           display: flex;
-          justify-content: space-between;
+          flex-wrap: wrap;
+          justify-content:space-around;
         }
         div {
           max-width: 30%;
@@ -152,11 +154,66 @@ function AboutMe() {
           color: #727070;
           margin: 8px 0 32px 0;
         }
+        @media (max-width: 900px) {
 
-
+        }
       `}</style>
-  </section>
+    </section>
   );
+}
+
+function Contact() {
+  return (
+    <section>
+      <div>
+        <h1>Contact me</h1>
+        <p>If you got interested in my work or just want to send me a hello, call me here I will be glad to see your messages.</p>
+        <form>
+          <input class="large_input" type="text" placeholder="Full Name" maxLength="60" required></input>
+          <input type="email" placeholder="Your Email" maxLength="40" required></input>
+          <select name="cars" id="cars">
+            <option value="repair">Repair an existing system</option>
+            <option value="create">
+              create a system from scratch</option>
+            <option value="participate">participate in a project</option>
+            <option value="other">Other...</option>
+          </select>
+          <input type="text" placeholder="Full Name" maxLength="60" required></input>
+
+        </form>
+      </div>
+
+      <style jsx>{`
+       h1 {
+        font-size: 2.5em;
+        color: #963d3d;
+      }
+
+      p{
+        margin-top:10px;
+        width:390px;
+        margin-left: 35%;
+      }
+
+      div{
+      text-align: center;
+      margin-top:40px;
+      }
+
+      .form{
+        display: block;
+      }
+
+      .large_input{
+        border-radius: 5px;
+        width: 150px;
+      }
+      select, option{
+      color: #000;
+    }
+    `}</style>
+    </section>
+  )
 }
 function HomePage() {
   return (
@@ -164,6 +221,7 @@ function HomePage() {
       <Header />
       <Intro />
       <AboutMe />
+      <Contact />
     </>
   );
 }
