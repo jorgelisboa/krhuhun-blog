@@ -109,11 +109,12 @@ function PerfilImage() {
       <img src="https://cdn.discordapp.com/attachments/438100369802002432/941338488714969178/photo.png" alt="Jorge photo" />
       <style jsx>{`
         div {
-          align-items: center;
+          text-align: center;
           background-color: #963d3d;
-          width: 50%;
         }
-
+        img {
+          width: 100%;
+        }
       `}</style>
     </div>
   );
@@ -152,8 +153,13 @@ function AboutMe() {
           color: #727070;
           margin: 8px 0 32px 0;
         }
-
-
+        @media (max-width: 900px) {
+          section {
+            justify-content: none;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
       `}</style>
   </section>
   );
@@ -164,6 +170,7 @@ function HomePage() {
       <Header />
       <Intro />
       <AboutMe />
+      
     </>
   );
 }
