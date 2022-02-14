@@ -19,3 +19,9 @@ Also, the project will be a little bit of:
   <li>Learning project for us and everyone who would like to.</li>
   <li>Challenge for us, creating again a full application from zero.</li>
 </ul>
+
+<h1>First of all</h1>
+<ul>
+    <li>Clone the repository</li>
+    <li>Add the the dependencies in the cmd(yarn add next react react-dom)</li>
+</ul>
