@@ -176,15 +176,14 @@ function AboutMe() {
     </section>
   );
 }
-
 function Contact() {
   return (
     <section>
+      <h1>Contact me</h1>
+      <p>If you got interested in my work or just want to send me a hello, call me here I will be glad to see your messages.</p>
       <div>
-        <h1>Contact me</h1>
-        <p>If you got interested in my work or just want to send me a hello, call me here I will be glad to see your messages.</p>
         <form>
-          <input class="large_input" type="text" placeholder="Full Name" maxLength="60" required></input>
+          <input type="text" placeholder="Full Name" maxLength="60" required></input>
           <input type="email" placeholder="Your Email" maxLength="40" required></input>
           <select name="cars" id="cars">
             <option value="repair">Repair an existing system</option>
@@ -193,8 +192,7 @@ function Contact() {
             <option value="participate">participate in a project</option>
             <option value="other">Other...</option>
           </select>
-          <input type="text" placeholder="Full Name" maxLength="60" required></input>
-
+          <input type="submit" value="Submit"></input>
         </form>
       </div>
 
@@ -204,26 +202,30 @@ function Contact() {
         color: #963d3d;
       }
 
+      input, select, option {
+        background-color: #302929;
+        border: none;
+        width: 90%;
+        cursor: pointer;
+        margin: 8px 0;
+        padding: 16px;
+      }
+
       p{
         margin-top: 10px;
       }
 
+      section {
+        text-align: center;
+      }
+
       div{
-      text-align: center;
-      margin-top:40px;
+        justify-content: center;
+        max-width: 80%;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
       }
-
-      .form{
-        display: block;
-      }
-
-      .large_input{
-        border-radius: 5px;
-        width: 150px;
-      }
-      select, option{
-      color: #000;
-    }
     `}</style>
     </section>
   )
