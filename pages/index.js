@@ -1,3 +1,7 @@
+import React from "react";
+import { useRouter } from "next/router";
+import appConfig from "../config.json";
+
 /*
     -- React is a JavaScript Librarie --
 - React use components to create and show us a JSX(the HTML and JS inside the functions).
@@ -6,11 +10,12 @@
 
 //Here we crate OUR React component called "Titulo" that returns and JSX
 function Header(props) {
-  console.log(props);
+  const router = useRouter();
+
   return (
     <header>
       <nav>
-        <div class="box-icon">
+        <div>
           <h1>JL</h1>
         </div>
         <ul>
@@ -18,7 +23,7 @@ function Header(props) {
             <a href="">About me</a>
           </li>
           <li>
-            <a href="">Blog</a>
+            <a onClick={() => router.push('/news')}>Blog</a>
           </li>
         </ul>
       </nav>
@@ -176,7 +181,7 @@ function AboutMe() {
     </section>
   );
 }
-function Contact() {
+function Contact() {  
   return (
     <section>
       <h1>Contact me</h1>
@@ -185,7 +190,7 @@ function Contact() {
         <form>
           <input type="text" placeholder="Full Name" maxLength="60" required></input>
           <input type="email" placeholder="Your Email" maxLength="40" required></input>
-          <select name="cars" id="cars">
+          <select>
             <option value="repair">Repair an existing system</option>
             <option value="create">
               create a system from scratch</option>
