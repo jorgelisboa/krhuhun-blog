@@ -20,7 +20,7 @@ function Header(props) {
         </div>
         <ul>
           <li>
-            <a href="">About me</a>
+            <a onClick={() => router.push('/about')}>About me</a>
           </li>
           <li>
             <a onClick={() => router.push('/news')}>Blog</a>
