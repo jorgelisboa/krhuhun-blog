@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+
 import appConfig from "../config.json";
 
 /*
@@ -9,58 +9,7 @@ import appConfig from "../config.json";
 - To create an React application you need first of all use yarn or node(npm).*/
 
 //Here we crate OUR React component called "Titulo" that returns and JSX
-function Header(props) {
-  const router = useRouter();
 
-  return (
-    <header>
-      <nav>
-        <div>
-          <h1>JL</h1>
-        </div>
-        <ul>
-          <li>
-            <a onClick={() => router.push('/about')}>About me</a>
-          </li>
-          <li>
-            <a onClick={() => router.push('/news')}>Blog</a>
-          </li>
-        </ul>
-      </nav>
-      <style jsx>
-        {`
-          nav {
-            padding: 0 10%;
-            align-items: center;
-            justify-content: space-between;
-            display: flex;
-            height: 110px;
-            width: 100%;
-          }
-
-          div {
-            padding: 1.5em 1.8em;
-            background-color: #963d3d;
-          }
-
-          nav ul {
-            float: right;
-          }
-
-          nav li {
-            display: inline-block;
-            margin: 0 5px;
-          }
-
-          a {
-            text-decoration: none;
-            cursor: pointer;
-          }
-        `}
-      </style>
-    </header>
-  );
-}
 function Intro() {
   return (
     <section>
@@ -238,7 +187,7 @@ function Contact() {
 function HomePage() {
   return (
     <>
-      <Header />
+      
       <Intro />
       <AboutMe />
       <Contact />
