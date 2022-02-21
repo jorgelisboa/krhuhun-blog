@@ -140,11 +140,18 @@ function Contact() {
           <input type="text" placeholder="Full Name" maxLength="60" required></input>
           <input type="email" placeholder="Your Email" maxLength="40" required></input>
           <select>
-            <option value="repair">Repair an existing system</option>
+            <option value="repair">
+              Repair an existing system
+            </option>
             <option value="create">
-              create a system from scratch</option>
-            <option value="participate">participate in a project</option>
-            <option value="other">Other...</option>
+              Create a system from scratch
+            </option>
+            <option value="participate">
+              Participate in a project
+            </option>
+            <option value="other">
+              Other...
+            </option>
           </select>
           <input type="submit" value="Submit"></input>
         </form>
